@@ -491,8 +491,8 @@ KBUILD_AFLAGS   := -D__ASSEMBLY__ -fno-PIE
 KBUILD_CFLAGS   := -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE \
 		   -Werror=implicit-function-declaration -Werror=implicit-int \
-		   -Wno-error=frame-larger-than= \
-		   -Werror=return-type -Wno-format-security \
+		   -Wno-error=frame-larger-than= -Wno-strict-prototypes -Wno-error=format \
+		   -Werror=return-type -Wno-format-security -Wno-align-mismatch -Wno-error=vla-extension \
 		   -Werror \
 		   -std=gnu89
 KBUILD_CPPFLAGS := -D__KERNEL__
