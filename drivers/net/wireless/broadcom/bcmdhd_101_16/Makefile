@@ -22,6 +22,7 @@
 #####################
 # Basic feature
 #####################
+ccflags-y := -Werror $(call cc-disable-warning, strict-prototypes)
 
 DHDCFLAGS += -DBCMUTILS_ERR_CODES -DUSE_NEW_RSPEC_DEFS
 DHDCFLAGS += -Wall -Werror -Wstrict-prototypes -Dlinux -DLINUX -DBCMDRIVER      \
