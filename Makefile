@@ -488,11 +488,11 @@ LINUXINCLUDE    := \
 		$(USERINCLUDE)
 
 KBUILD_AFLAGS   := -D__ASSEMBLY__ -fno-PIE
-KBUILD_CFLAGS   := -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs \
+KBUILD_CFLAGS   := -Wall -Wundef -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE \
-		   -Werror=implicit-function-declaration -Werror=implicit-int \
-		   -Wno-error=frame-larger-than= \
-		   -Werror=return-type -Wno-format-security \
+		   -Werror=implicit-function-declaration -Wno-error=implicit-int -Wno-unused-function \
+		   -Wno-error=frame-larger-than= -Wno-error=strict-prototypes -Wno-error=format \
+		   -Werror=return-type -Wno-format-security -Wno-error=vla-extension \
 		   -Werror \
 		   -std=gnu89
 KBUILD_CPPFLAGS := -D__KERNEL__
